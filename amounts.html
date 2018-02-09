@@ -11,13 +11,13 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "webpro.js", "require.js", "amounts.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "require.js", "webpro.js", "amounts.css"], "outOfDate":[]};
 </script>
   
   <title>Amounts</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=4105930719" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=4030972336" id="pagesheet"/>
    </head>
  <body>
 
@@ -33,35 +33,43 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      <p>Choose amount</p>
      <p>of followers</p>
     </div>
-    <form class="form-grp clearfix colelem" id="widgetu575" method="post" enctype="multipart/form-data" action="scripts/form-u575.php"><!-- none box -->
-     <div class="fld-grp clearfix grpelem" id="widgetu577" data-required="true" data-type="email"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix colelem" id="u578-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" for="widgetu577_input"><!-- content --><span class="actAsPara">Email:</span></label>
-      <span class="fld-input NoWrap actAsDiv borderbox rounded-corners clearfix colelem" id="u579-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u579-3"><input class="wrapped-input" type="email" spellcheck="false" id="widgetu577_input" name="Email" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu577_prompt" for="widgetu577_input"><span class="actAsPara">Enter Email</span></label></div></span>
-     </div>
-     <div class="clearfix grpelem" id="pwidgetu581"><!-- column -->
-      <div class="fld-grp clearfix colelem" id="widgetu581" data-required="false"><!-- none box -->
-       <span class="fld-input NoWrap actAsDiv borderbox rounded-corners clearfix grpelem" id="u582-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u582-3"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu581_input" name="custom_U581" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu581_prompt" for="widgetu581_input"><span class="actAsPara">100,500,1000,1500,2000,3000,4000</span></label></div></span>
+    <div class="clearfix colelem" id="pwidgetu575"><!-- group -->
+     <form class="form-grp clearfix grpelem" id="widgetu575" method="post" enctype="multipart/form-data" action="scripts/form-u575.php"><!-- none box -->
+      <div class="fld-grp clearfix grpelem" id="widgetu577" data-required="true" data-type="email"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix colelem" id="u578-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" for="widgetu577_input"><!-- content --><span class="actAsPara">Email:</span></label>
+       <span class="fld-input NoWrap actAsDiv borderbox rounded-corners test clearfix colelem" id="u579-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u579-3"><input class="wrapped-input" type="email" spellcheck="false" id="widgetu577_input" name="Email" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu577_prompt" for="widgetu577_input"><span class="actAsPara">Enter Email</span></label></div></span>
       </div>
-      <button class="submit-btn NoWrap gradient rounded-corners clearfix colelem" id="u576-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" type="submit" value="Grow Now" tabindex="3"><!-- content -->
-       <div style="margin-top:-19px;height:19px;">
-        <p>Grow Now</p>
+      <div class="clearfix grpelem" id="pwidgetu581"><!-- column -->
+       <div class="fld-grp clearfix colelem" id="widgetu581" data-required="false"><!-- none box -->
+        <span class="fld-input NoWrap actAsDiv borderbox test rounded-corners clearfix grpelem" id="u582-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u582-3"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu581_input" name="custom_U581" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu581_prompt" for="widgetu581_input"><span class="actAsPara">100,500,1000,1500,2000,3000,4000</span></label></div></span>
        </div>
-      </button>
-      <div class="clearfix colelem" id="pu585-4"><!-- group -->
-       <div class="clearfix grpelem" id="u585-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>Submitting Form...</p>
-       </div>
-       <div class="clearfix grpelem" id="u586-6" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>The server encountered an error.</p>
-        <p>Please, try to later.</p>
-       </div>
-       <div class="clearfix grpelem" id="u587-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>Successfully!</p>
+       <button class="submit-btn NoWrap gradient rounded-corners clearfix colelem" id="u576-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" type="submit" value="Grow Now" tabindex="3"><!-- content -->
+        <div style="margin-top:-19px;height:19px;">
+         <p>Grow Now</p>
+        </div>
+       </button>
+       <div class="clearfix colelem" id="pu585-4"><!-- group -->
+        <div class="clearfix grpelem" id="u585-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+         <p>Submitting Form...</p>
+        </div>
+        <div class="clearfix grpelem" id="u586-6" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+         <p>The server encountered an error.</p>
+         <p>Please, try to later.</p>
+        </div>
+        <div class="clearfix grpelem" id="u587-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+         <p>Successfully!</p>
+        </div>
        </div>
       </div>
+     </form>
+     <div class="size_fixed grpelem" id="u625" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"><!-- custom html -->
      </div>
-    </form>
-    <div class="size_fixed colelem" id="u625" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"><!-- custom html -->
+     <div class="grpelem" id="u687"><!-- custom html -->
+      <form id="form" action="https://learn.javascript.ru/forms-submit" method="get" target="_blank">
+<input type="text" name="txt" value="" required>
+<input type="submit" value="Отправить">
+</form>
+     </div>
     </div>
     <div class="clearfix colelem" id="u642-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
      <p>Terms &amp; Conditions</p>

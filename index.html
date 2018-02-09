@@ -5,69 +5,461 @@
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="2018.0.0.379"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  
   <script type="text/javascript">
    // Update the 'nojs'/'js' class on the html node
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "webpro.js", "require.js", "index.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "require.js", "index.css"], "outOfDate":[]};
 </script>
-
+  
   <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=3797569915" id="pagesheet"/>
-   </head>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=422865998" id="pagesheet"/>
+    <!--custom head HTML-->
+  <style type="text/css">/* General layout */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro';
+    background-color: rgb(245, 245, 245);
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 15px 20px;
+    background-color: rgba(255, 219, 58, 0.3);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+    color: inherit; 
+}
+    
+.container {
+	margin: 80px auto;
+	width: 90%;
+	max-width: 800px;
+}
+
+.registration {
+	background-color: #fff;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+	border-bottom: 5px solid #ffdb3a;
+}
+
+
+.input-requirements {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  max-width: 400px;
+  margin: 10px auto;
+  color: rgb(150,150,150);
+}
+
+
+.input-requirements li.invalid {
+	color: #e74c3c;
+}
+.input-requirements li.valid {
+	color: #2ecc71;
+}
+
+.input-requirements li.valid:after {
+	display: inline-block;
+	padding-left: 10px;
+	content: "\2713";
+}
+
+/* FormHack v1.2.0 (formhack.io) */
+
+/* Config ----------------------------- */
+:root {
+
+  /* Font */
+  --fh-font-family: 'Source Sans Pro', sans-serif;
+  --fh-font-size: 15px;
+  --fh-font-color: rgb(40, 40, 40);
+
+  /* Borders */
+  --fh-border-radius: 3px;
+  --fh-border-width: 1px;
+  --fh-border-style: solid;
+  --fh-border-color: rgb(200, 200, 200);
+
+  /* Inputs, Textareas, Select, Option */
+  --fh-input-height: 40px;
+  --fh-input-width: 100%;
+  --fh-input-max-width: 400px;
+  --fh-input-bg-color: rgb(250,250,250);
+  --fh-focus-bg-color: var(--fh-input-bg-color);
+  --fh-focus-border-color: #000;
+  --fh-focus-font-color: var(--fh-font-color);
+
+  /* Select Vendor Styling */
+  --fh-select-vendor-styling: none; /* comment this out to maintain vendor styling */
+
+
+  /* Buttons & Input Submits */
+  --fh-button-height: 40px;
+  --fh-button-width: 100%;
+  --fh-button-max-width: 200px;
+  --fh-button-font-color: var(--fh-font-color);
+  --fh-button-bg-color: rgba(255, 219, 58,0.3);
+  --fh-button-hover-bg-color: rgb(255, 219, 58);
+  --fh-button-hover-font-color: var(--fh-font-color);
+
+  /* Layout */
+  --fh-layout-display: block;
+  --fh-layout-margin: 10px auto; /* change to "10px auto" to center */
+  --fh-layout-text-align: center;
+}
+
+
+
+/* Global Reset Styles ------------------ */
+
+
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: var(--fh-font-family);
+  font-size: var(--fh-font-size);
+  color: var(--fh-font-color);
+  vertical-align: top;
+
+  display: var(--fh-layout-display);
+  margin: var(--fh-layout-margin);
+  text-align: var(--fh-layout-text-align);
+}
+
+
+datalist {
+  font-family: var(--fh-font-family);
+  font-size: var(--fh-font-size);
+}
+
+label {
+  display: block;
+  margin: var(--fh-layout-margin);
+  text-align: var(--fh-layout-text-align);
+  margin-bottom: 20px;
+  position: relative;
+  padding: 0 20px;
+}
+
+
+
+/* Input & Textarea ------------------ */
+
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+  width: var(--fh-input-width);
+  max-width: var(--fh-input-max-width);
+  padding: calc( var(--fh-input-height) / 5 );
+  background-color: var(--fh-input-bg-color);
+
+  border-radius: var(--fh-border-radius);
+  border-width: var(--fh-border-width);
+  border-style: var(--fh-border-style);
+  border-color: var(--fh-border-color);
+}
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  height: var(--fh-input-height);
+  -webkit-appearance: none;
+}
+
+/* Other */
+
+textarea {
+  -webkit-appearance: none;
+  overflow: auto;
+}
+
+input[type="range"] {
+  height: var(--fh-input-height);
+  width: var(--fh-input-width);
+  max-width: var(--fh-input-max-width);
+}
+
+input[type="file"] {
+  min-height: var(--fh-input-height);
+}
+
+input[type="search"] {
+  height: var(--fh-input-height);
+  -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* For checkbox and radio to be centered, need to wrap the input and label in a span -
+/* .checkbox-container {
+/*  display: block;
+/*  text-align: center;
+/* }
+/* Select ------------------ */
+
+select {
+  height: var(--fh-input-height);
+
+  -webkit-appearance: var(--fh-select-vendor-styling, menulist);
+  -moz-appearance: var(--fh-select-vendor-styling, menulist);
+  -ms-appearance: var(--fh-select-vendor-styling, menulist);
+  -o-appearance: var(--fh-select-vendor-styling, menulist);
+
+
+}
+
+select[multiple] {
+  height: auto;
+  min-height: var(--fh-input-height);
+  padding: 0;
+}
+
+select[multiple] option {
+  margin: 0;
+  padding: calc( var(--fh-input-height) / 5 );
+}
+
+/* Fieldset ------------------ */
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+  font-weight: inherit;
+}
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  height: var(--fh-button-height);
+  width: var(--fh-button-width);
+  max-width: var(--fh-button-max-width);
+  background-color: var(--fh-button-bg-color);
+  padding: calc( var(--fh-input-height) / 5 );
+  cursor: pointer;
+
+  color: var(--fh-button-font-color);
+  font-weight: 700;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: var(--fh-border-radius);
+  border-width: var(--fh-border-width);
+  border-style: var(--fh-border-style);
+  border-color: var(--fh-border-color);
+
+
+
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+}
+
+input[type="image"] {
+  text-align: center;
+  padding: calc( var(--fh-input-height) / 5 );
+}
+
+/* States ------------------ */
+
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus  {
+  background-color: var(--fh-focus-bg-color);
+  border-color: var(--fh-focus-border-color);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: var(--fh-focus-border-color) solid 2px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: var(--fh-button-hover-bg-color);
+  color: var(--fh-button-hover-font-color);
+}
+
+
+
+
+/* Custom ------------------ */
+
+
+input:not([type="submit"]):valid {
+  border-color: #2ecc71;
+}
+
+
+/* Hide and show related .input-requirements when interacting with input */
+
+input:not([type="submit"]) + .input-requirements {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-out;  
+}
+
+input:not([type="submit"]):hover + .input-requirements,
+input:not([type="submit"]):focus + .input-requirements,
+input:not([type="submit"]):active + .input-requirements {
+  max-height: 1000px; /* any large number (bigger then the .input-requirements list) */
+  transition: max-height 1s ease-in;
+}
+
+</style>
+ </head>
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- column -->
-   <div class="position_content" id="page_position_content">
-    <div class="clip_frame colelem" id="u421"><!-- svg -->
-     <img class="svg" id="u417" src="images/app-icon.svg?crc=9689390" alt="" data-mu-svgfallback="images/app%20icon_poster_.png?crc=4288403288" data-heightwidthratio="1" data-image-width="90" data-image-height="90"/>
-    </div>
-    <div class="clearfix colelem" id="u360-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-     <p>EVERYBODY GROWS</p>
-    </div>
-    <div class="clearfix colelem" id="u293-6" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-     <p>Get unlimited free followers</p>
-     <p>and impress your friends!</p>
-    </div>
-    <form class="form-grp clearfix colelem" id="widgetu102" method="post" enctype="multipart/form-data" action="http://htmlbook.ru/html/form"><!-- none box -->
-     <div class="fld-grp clearfix grpelem" id="widgetu107" data-required="true" data-type="email"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix colelem" id="u110-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" for="widgetu107_input"><!-- content --><span class="actAsPara">Email:</span></label>
-      <span class="fld-input NoWrap actAsDiv borderbox rounded-corners clearfix colelem" id="u108-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u108-3"><input class="wrapped-input" type="email" spellcheck="false" id="widgetu107_input" name="Email" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu107_prompt" for="widgetu107_input"><span class="actAsPara">Enter Email</span></label></div></span>
-     </div>
-     <div class="clearfix grpelem" id="pwidgetu103"><!-- column -->
-      <div class="fld-grp clearfix colelem" id="widgetu103" data-required="true"><!-- none box -->
-       <span class="fld-input NoWrap actAsDiv borderbox rounded-corners clearfix grpelem" id="u106-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><div id="u106-3"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu103_input" name="custom_U103" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu103_prompt" for="widgetu103_input"><span class="actAsPara">Connect your Instagram account</span></label></div></span>
-      </div>
-      <button class="submit-btn NoWrap gradient rounded-corners clearfix colelem" id="u118-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" type="submit" value="Connect Now" tabindex="3"><!-- content -->
-       <div style="margin-top:-19px;height:19px;">
-        <p>Connect Now</p>
-       </div>
-      </button>
-      <div class="clearfix colelem" id="pu111-4"><!-- group -->
-       <div class="clearfix grpelem" id="u111-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>Submitting Form...</p>
-       </div>
-       <div class="clearfix grpelem" id="u117-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>The server encountered an error.</p>
-       </div>
-       <div class="clearfix grpelem" id="u112-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-        <p>Successfully!</p>
-       </div>
-      </div>
-     </div>
-    </form>
-    <div class="clearfix colelem" id="u556-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-     <p>APP OF THE DAY</p>
-    </div>
-    <div class="clearfix colelem" id="u341-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+   <div class="clip_frame colelem" id="u421"><!-- svg -->
+    <img class="svg" id="u417" src="images/app-icon.svg?crc=9689390" alt="" data-mu-svgfallback="images/app%20icon_poster_.png?crc=4288403288" data-heightwidthratio="1" data-image-width="90" data-image-height="90"/>
+   </div>
+   <div class="clearfix colelem" id="u360-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+    <p>EVERYBODY GROWS</p>
+   </div>
+   <div class="clearfix colelem" id="u293-6" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+    <p>Get unlimited free followers</p>
+    <p>and impress your friends!</p>
+   </div>
+   <div class="clearfix colelem" id="pu341-4"><!-- group -->
+    <div class="clearfix grpelem" id="u341-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
      <p>Terms &amp; Conditions</p>
     </div>
-    <div class="clearfix colelem" id="u346-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+    <div class="clearfix grpelem" id="u346-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
      <p>Copyright 2018 EVG. All rights reserved.</p>
+    </div>
+    <div class="clearfix grpelem" id="u556-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+     <p>APP OF THE DAY</p>
+    </div>
+    <div class="grpelem" id="u744"><!-- custom html -->
+     <div class="container">
+		<form <form id="form" action="https://learn.javascript.ru/forms-submit" method="get" target="_self" class="registration">
+			<h1>Registration Form</h1>
+
+			<label for="username">
+				<span>Username</span>
+
+				<input type="text" id="username" minlength="3" required>
+
+				<ul class="input-requirements">
+					<li>At least 3 characters long</li>
+					<li>Must only contain letters and numbers (no special characters)</li>
+				</ul>
+			</label>
+
+			<label for="password">
+				<span>Password</span>
+
+				<input type="password" id="password" 
+						maxlength="100" minlength="8" required>
+
+				<ul class="input-requirements">
+					<li>At least 8 characters long (and less than 100 characters)</li>
+					<li>Contains at least 1 number</li>
+					<li>Contains at least 1 lowercase letter</li>
+					<li>Contains at least 1 uppercase letter</li>
+					<li>Contains a special character (e.g. @ !)</li>
+				</ul>
+			</label>
+
+			<label for="password_repeat">
+				<span>Repeat Password</span>
+				<input type="password" id="password_repeat" maxlength="100" minlength="8" required>
+			</label>
+
+			<br>
+
+			<input type="submit">	
+
+		</form>
+	</div>
     </div>
    </div>
   </div>
@@ -82,12 +474,11 @@ var suppressMissingFileError = false
 l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
 f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
 setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","webpro"],function(d){var $ = d;$(document).ready(function(){try{
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput"],function(d){var $ = d;$(document).ready(function(){try{
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
-Muse.Utils.initWidget('#widgetu102', ['#bp_infinity'], function(elem) { return new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu102 */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
