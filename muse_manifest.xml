@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="apptoline.com" resolutions="1x" timestamp="1518231623417">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="apptoline.com" resolutions="1x" timestamp="1518231884784">
   <folder name="images">
     <file name="app-icon.svg" crc="9689390" seo="true" ref="index:amounts">
       <caption webpage="index" alt=""/>
@@ -19,5 +19,5 @@
     <file name="require.js" crc="4157109226" ref="index:amounts"/>
   </folder>
   <file name="index.html" crc="247982054" seo="true" mt="1518225326403" redirect="true"/>
-  <file name="amounts.html" crc="3986173480" seo="true" mt="1518231607352" redirect="true"/>
+  <file name="amounts.html" crc="524272215" seo="true" mt="1518231832662" redirect="true"/>
 </manifest>
