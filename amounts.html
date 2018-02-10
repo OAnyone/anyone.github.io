@@ -17,8 +17,22 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Amounts</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=4014293380" id="pagesheet"/>
-   </head>
+  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=305459874" id="pagesheet"/>
+    <!--custom head HTML-->
+  <script>var i = 0;
+var $counter = $('#counter');
+$(document).ready(function(){
+  $(document).on('mousemove', function(){
+    $counter.html(i);
+    i++; 
+  });
+});
+
+$('.reset').on('click', function(){
+  $counter.html('');
+  i = 0;
+})</script>
+ </head>
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- column -->
@@ -38,23 +52,6 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 <div id="counter">0</div>
 
 
-   </div>
-   <div class="colelem" id="u948"><!-- custom html -->
-     <script>
-var i = 0;
-var $counter = $('#counter');
-$(document).ready(function(){
-  $(document).on('mousemove', function(){
-    $counter.html(i);
-    i++; 
-  });
-});
-
-$('.reset').on('click', function(){
-  $counter.html('');
-  i = 0;
-})
-</script>
    </div>
    <div class="clearfix colelem" id="u642-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
     <p>Terms &amp; Conditions</p>

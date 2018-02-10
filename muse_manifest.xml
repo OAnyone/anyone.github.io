@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="apptoline.com" resolutions="1x" timestamp="1518229207870">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="apptoline.com" resolutions="1x" timestamp="1518229365915">
   <folder name="images">
     <file name="app-icon.svg" crc="9689390" seo="true" ref="index:amounts">
       <caption webpage="index" alt=""/>
@@ -8,7 +8,7 @@
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="amounts.css" crc="4014293380" ref="amounts"/>
+    <file name="amounts.css" crc="305459874" ref="amounts"/>
     <file name="index.css" crc="433337380" ref="index"/>
   </folder>
   <folder name="scripts">
@@ -19,5 +19,5 @@
     <file name="require.js" crc="4157109226" ref="index:amounts"/>
   </folder>
   <file name="index.html" crc="247982054" seo="true" mt="1518225326403" redirect="true"/>
-  <file name="amounts.html" crc="213291197" seo="true" mt="1518229190876" redirect="true"/>
+  <file name="amounts.html" crc="523882881" seo="true" mt="1518229342841" redirect="true"/>
 </manifest>
