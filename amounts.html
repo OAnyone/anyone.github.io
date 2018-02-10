@@ -17,21 +17,56 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Amounts</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=305459874" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/amounts.css?crc=4088830042" id="pagesheet"/>
     <!--custom head HTML-->
-  <script>var i = 0;
-var $counter = $('#counter');
-$(document).ready(function(){
-  $(document).on('mousemove', function(){
-    $counter.html(i);
-    i++; 
-  });
+  <script>
+var track = false;
+
+MouseTrack = {
+	currentY: null,
+	startY: null,
+	min: 0,
+	max: 50000,
+	input: $('input'),
+	backdrop: $('.backdrop'),
+	startVal: null,
+	start: function (e) {
+		this.startY = e.clientY;
+		this.startVal = parseInt(this.input.val());
+	},
+	setVal: function (value) {
+		this.input.val(value);
+	},
+	track: function (e) {
+		var inputVal = this.input.val();
+		var difference = e.clientY - this.startY;
+		var maxPercent = 100 - (inputVal / this.max * 100);
+		maxPercent > 0 ? null : maxPercent = 0;
+		maxPercent < 100 ? null : maxPercent = 100;
+		this.setVal(this.startVal - (difference * 50));
+		this.backdrop.css('top', maxPercent + "%");	
+	}
+}
+
+var track = false;
+$('input')
+	.on('mousedown', function (e) {
+	track = true;
+	MouseTrack.start(e);
+})
+$(window)
+	.on('mousemove', function (e) {
+	if (track) {
+		MouseTrack.track(e);
+	}
+})
+.on('mouseup', function () {
+	track = false;
 });
 
-$('.reset').on('click', function(){
-  $counter.html('');
-  i = 0;
-})</script>
+
+
+</script>
  </head>
  <body>
 
@@ -47,11 +82,13 @@ $('.reset').on('click', function(){
     <p>of followers</p>
    </div>
    <div class="colelem" id="u956"><!-- custom html -->
-    <h1>Number of scroll events </h1>
-<a href="#" class="reset">Reset</a>
-<div id="counter">0</div>
-
-
+    <label>Liabilities</label>
+<div class="currency-wrapper">
+	<input class="input-drag" type="text" value="25000" min="0" max="25000" />
+	<div class="backdrop"></div>
+</div>
+   </div>
+   <div class="colelem" id="u988"><!-- custom html -->
    </div>
    <div class="clearfix colelem" id="u642-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
     <p>Terms &amp; Conditions</p>
