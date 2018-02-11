@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="ega.ml" resolutions="1x" timestamp="1518306312493">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="ega.ml" resolutions="1x" timestamp="1518381150131">
   <folder name="images">
     <file name="app-icon2.svg" crc="4046429626" seo="true" ref="index:amounts">
       <caption webpage="index" alt=""/>
@@ -20,5 +20,5 @@
     <file name="require.js" crc="4157109226" ref="index:amounts"/>
   </folder>
   <file name="index.html" crc="4024751528" seo="true" mt="1518304519171" redirect="true"/>
-  <file name="amounts.html" crc="4200948552" seo="true" mt="1518306245699" redirect="true"/>
+  <file name="amounts.html" crc="219640085" seo="true" mt="1518381132507" redirect="true"/>
 </manifest>
